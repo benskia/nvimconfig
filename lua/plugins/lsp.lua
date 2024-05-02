@@ -55,6 +55,7 @@ return {
             capabilities = lsp_capabilities,
           }
         end,
+
         lua_ls = function()
           require("lspconfig").lua_ls.setup {
             capabilities = lsp_capabilities,

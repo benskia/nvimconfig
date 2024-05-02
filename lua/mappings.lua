@@ -15,9 +15,13 @@ map("x", "<leader>p", '"_dP', "Paste without swapping target to clipboard.")
 map("n", "<leader>d", '"_d', "Delete to void register.")
 map("v", "<leader>d", '"_d', "Delete to void register.")
 
+-- find & replace
+map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "find and replace all")
+
 -- mode switch
 map("i", "jk", "<Esc>", "Return to normal mode from input.")
 
+-- higlighting
 map("n", "<Esc>", "<cmd>nohlsearch<CR>", "Clear search highlighting.")
 
 -- lsp diagnostics
