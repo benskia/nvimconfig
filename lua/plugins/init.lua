@@ -26,4 +26,6 @@ return {
   "tpope/vim-sleuth",
   "tpope/vim-speeddating",
   "tpope/vim-vinegar",
+
+  "mbbill/undotree",
 }

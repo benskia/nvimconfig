@@ -1,36 +1,41 @@
-local map = vim.keymap.set
+local map = function(mode, keys, func, desc)
+  desc = desc or ""
+  vim.keymap.set(mode, keys, func, { desc = desc })
+end
 
--- center cursor after paging up/down
-map("n", "J", "mzJ`z")
-map("n", "<C-d>", "<C-d>zz")
-map("n", "<C-u>", "<C-u>zz")
-map("n", "n", "nzzzv")
-map("n", "N", "Nzzzv")
+-- position cursor
+map("n", "J", "mzJ`z", "Restores position after appending next line.")
+map("n", "<C-d>", "<C-d>zz", "Centers position after 1/2page down.")
+map("n", "<C-u>", "<C-u>zz", "Centers position after 1/2page up.")
+map("n", "n", "nzzzv", "Centers position after find next.")
+map("n", "N", "Nzzzv", "Centers position after find prev.")
 
--- delete to void register
-map("x", "<leader>p", '"_dP')
-map("n", "<leader>d", '"_d')
-map("v", "<leader>d", '"_d')
+-- void register
+map("x", "<leader>p", '"_dP', "Paste without swapping target to clipboard.")
+map("n", "<leader>d", '"_d', "Delete to void register.")
+map("v", "<leader>d", '"_d', "Delete to void register.")
 
--- input to normal mode
-map("i", "jk", "<Esc>")
+-- mode switch
+map("i", "jk", "<Esc>", "Return to normal mode from input.")
 
--- clear search highlighting
-map("n", "<Esc>", "<cmd>nohlsearch<CR>")
+map("n", "<Esc>", "<cmd>nohlsearch<CR>", "Clear search highlighting.")
 
 -- lsp diagnostics
-map("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
-map("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
-map("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
-map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+map("n", "[d", vim.diagnostic.goto_prev, "Prev diagnostic message.")
+map("n", "]d", vim.diagnostic.goto_next, "Next diagnostic message.")
+map("n", "<leader>e", vim.diagnostic.open_float, "Show diagnostic error message.")
+map("n", "<leader>q", vim.diagnostic.setloclist, "Open quickfix list.")
 
--- tabufline
-map("n", "<leader>b", "<cmd> enew <CR>", { desc = "Buffer New" })
-map("n", "<leader>x", "<cmd> bdelete <CR>", { desc = "Buffer Delete" })
-map("n", "<tab>", "<cmd> bnext <CR>", { desc = "Buffer Goto next" })
-map("n", "<S-tab>", "<cmd> bprevious <CR>", { desc = "Buffer Goto prev" })
+-- buffers
+map("n", "<leader>b", "<cmd> enew <CR>", "Buffer New")
+map("n", "<leader>x", "<cmd> bdelete <CR>", "Buffer Delete")
+map("n", "<tab>", "<cmd> bnext <CR>", "Buffer Goto next")
+map("n", "<S-tab>", "<cmd> bprevious <CR>", "Buffer Goto prev")
 
 -- terminal
-map("t", "<C-x>", "<C-\\><C-n>", { desc = "Terminal Escape terminal mode" })
-map("n", "<leader>th", "<C-w>s <cmd> terminal <CR>", { desc = "Terminal New horizontal term" })
-map("n", "<leader>ts", "<C-w>v <cmd> terminal <CR>", { desc = "Terminal New vertical term" })
+map("t", "<C-x>", "<C-\\><C-n>", "Terminal Escape terminal mode")
+map("n", "<leader>ts", "<C-w>s <cmd> terminal <CR>", "Terminal New horizontal term")
+map("n", "<leader>tv", "<C-w>v <cmd> terminal <CR>", "Terminal New vertical term")
+
+-- plugins
+map("n", "<leader>u", vim.cmd.UndotreeToggle, "Toggle Undotree")

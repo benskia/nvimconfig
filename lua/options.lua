@@ -42,7 +42,8 @@ vim.o.ruler = false
 -- Swap & Undo
 vim.opt.swapfile = false
 vim.opt.backup = false
+vim.opt.undodir = os.getenv "HOMEPATH" .. "/.vim/undodir"
 vim.opt.undofile = true
 
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
