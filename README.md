@@ -1,0 +1,1 @@
+# Distrollo's nvimconfig
