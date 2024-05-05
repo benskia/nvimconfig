@@ -1,6 +1,6 @@
 vim.o.laststatus = 3
 vim.o.showmode = false
-vim.opt.shell = "nu"
+-- vim.opt.shell = ""
 
 vim.o.cursorline = true
 vim.o.cursorlineopt = "number"
