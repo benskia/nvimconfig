@@ -1,6 +1,6 @@
 vim.o.laststatus = 3
 vim.o.showmode = false
--- vim.opt.shell = ""
+vim.opt.shell = "powershell"
 
 vim.o.cursorline = true
 vim.o.cursorlineopt = "number"
@@ -42,8 +42,11 @@ vim.o.ruler = false
 -- Swap & Undo
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv "HOMEPATH" .. "/.vim/undodir"
+vim.opt.undodir = os.getenv("USERPROFILE") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
+
+-- NetRW
+vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'

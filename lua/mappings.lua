@@ -19,7 +19,7 @@ map("v", "<leader>d", '"_d', "Delete to void register.")
 map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "find and replace all")
 
 -- mode switch
-map("i", "jk", "<Esc>", "Return to normal mode from input.")
+map("i", "jk", "<Esc>", "Return to normal mode.")
 
 -- higlighting
 map("n", "<Esc>", "<cmd>nohlsearch<CR>", "Clear search highlighting.")
@@ -37,7 +37,7 @@ map("n", "<tab>", "<cmd> bnext <CR>", "Buffer Goto next")
 map("n", "<S-tab>", "<cmd> bprevious <CR>", "Buffer Goto prev")
 
 -- terminal
-map("t", "<C-x>", "<C-\\><C-n>", "Terminal Escape terminal mode")
+map("t", "<C-q>", "<C-\\><C-n>", "Terminal Escape terminal mode")
 map("n", "<leader>ts", "<C-w>s <cmd> terminal <CR>", "Terminal New horizontal term")
 map("n", "<leader>tv", "<C-w>v <cmd> terminal <CR>", "Terminal New vertical term")
 

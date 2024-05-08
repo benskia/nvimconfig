@@ -43,6 +43,7 @@ return {
         "pyright",
         "gopls",
         "rust_analyzer",
+        "zls",
 
         -- web dev
         "html",
@@ -79,6 +80,7 @@ return {
       },
     }
 
+    local luasnip = require "luasnip"
     local cmp = require "cmp"
     local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
@@ -91,13 +93,26 @@ return {
         { name = "path" },
         { name = "nvim_lsp" },
         { name = "luasnip", keyword_length = 2 },
-        { name = "buffer", keyword_length = 3 },
+        { name = "buffer",  keyword_length = 3 },
       },
       mapping = cmp.mapping.preset.insert {
         ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
         ["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
+        ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-y>"] = cmp.mapping.confirm { select = true },
         ["<C-Space>"] = cmp.mapping.complete(),
+
+        ["<C-h>"] = cmp.mapping(function()
+          if luasnip.locally_jumpable(-1) then
+            luasnip.jump(-1)
+          end
+        end, { 'i', 's' }),
+        ["<C-l>"] = cmp.mapping(function()
+          if luasnip.expand_or_locally_jumpable() then
+            luasnip.expand_or_jump()
+          end
+        end, { 'i', 's' }),
       },
       snippet = {
         expand = function(args)
