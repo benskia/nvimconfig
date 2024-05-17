@@ -32,7 +32,6 @@ map("n", "<tab>", "<cmd> bnext <CR>", "Buffer Goto next")
 map("n", "<S-tab>", "<cmd> bprevious <CR>", "Buffer Goto prev")
 
 -- terminal
-map("t", "<C-q>", "<C-\\><C-n>", "Terminal Escape terminal mode")
 map("n", "<leader>ts", "<C-w>s <cmd> terminal <CR>", "Terminal New horizontal term")
 map("n", "<leader>tv", "<C-w>v <cmd> terminal <CR>", "Terminal New vertical term")
 
