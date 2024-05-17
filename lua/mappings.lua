@@ -13,9 +13,6 @@ map("n", "N", "Nzzzv", "Centers position after find prev.")
 -- find & replace
 map("n", "<leader>rN", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "find and replace all")
 
--- mode switch
-map("i", "jk", "<Esc>", "Return to normal mode.")
-
 -- higlighting
 map("n", "<Esc>", "<cmd>nohlsearch<CR>", "Clear search highlighting.")
 
