@@ -10,8 +10,6 @@ return {
     opts = { signs = false },
   },
 
-  { "folke/zen-mode.nvim",                 opts = {} },
-  { "folke/twilight.nvim",                 opts = {} },
   { "lukas-reineke/indent-blankline.nvim", main = "ibl",  opts = {} },
 
   { "echasnovski/mini.comment",            version = "*", opts = {} },
