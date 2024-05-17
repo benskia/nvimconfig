@@ -11,6 +11,7 @@ return {
       "go",
       "python",
       "rust",
+      "zig",
     },
     highlight = {
       enable = true,

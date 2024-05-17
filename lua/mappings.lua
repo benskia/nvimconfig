@@ -10,13 +10,8 @@ map("n", "<C-u>", "<C-u>zz", "Centers position after 1/2page up.")
 map("n", "n", "nzzzv", "Centers position after find next.")
 map("n", "N", "Nzzzv", "Centers position after find prev.")
 
--- void register
-map("x", "<leader>p", '"_dP', "Paste without swapping target to clipboard.")
-map("n", "<leader>d", '"_d', "Delete to void register.")
-map("v", "<leader>d", '"_d', "Delete to void register.")
-
 -- find & replace
-map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "find and replace all")
+map("n", "<leader>rN", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "find and replace all")
 
 -- mode switch
 map("i", "jk", "<Esc>", "Return to normal mode.")

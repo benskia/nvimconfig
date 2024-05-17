@@ -18,7 +18,7 @@ return {
       cpp = { "clangd" },
       javascript = { { "prettierd", "prettier" } },
       lua = { "stylua" },
-      python = { "isort", "black" },
+      python = { "black" },
       rust = { "rustfmt" },
     },
     format_on_save = { timeout_ms = 500, lsp_fallback = true },

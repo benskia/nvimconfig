@@ -14,12 +14,9 @@ return {
   { "folke/twilight.nvim",                 opts = {} },
   { "lukas-reineke/indent-blankline.nvim", main = "ibl",  opts = {} },
 
-  { "echasnovski/mini.align",              version = "*", opts = {} },
   { "echasnovski/mini.comment",            version = "*", opts = {} },
-  { "echasnovski/mini.indentscope",        version = "*", opts = {} },
   { "echasnovski/mini.move",               version = "*", opts = {} },
   { "echasnovski/mini.pairs",              version = "*", opts = {} },
-  { "echasnovski/mini.splitjoin",          version = "*", opts = {} },
   { "echasnovski/mini.statusline",         version = "*", opts = {} },
   { "echasnovski/mini.surround",           version = "*", opts = {} },
 
