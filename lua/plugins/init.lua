@@ -12,16 +12,15 @@ return {
 
   { "lukas-reineke/indent-blankline.nvim", main = "ibl",  opts = {} },
 
-  { "echasnovski/mini.comment",            version = "*", opts = {} },
   { "echasnovski/mini.move",               version = "*", opts = {} },
   { "echasnovski/mini.pairs",              version = "*", opts = {} },
   { "echasnovski/mini.statusline",         version = "*", opts = {} },
-  { "echasnovski/mini.surround",           version = "*", opts = {} },
 
   "tpope/vim-fugitive",
   "tpope/vim-repeat",
   "tpope/vim-sleuth",
   "tpope/vim-speeddating",
+  "tpope/vim-surround",
   "tpope/vim-vinegar",
 
   "mbbill/undotree",

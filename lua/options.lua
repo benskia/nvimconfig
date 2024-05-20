@@ -25,7 +25,8 @@ vim.o.updatetime = 250
 vim.opt.hidden = true
 vim.opt.autoread = true
 vim.opt.autowrite = true
-vim.opt.bsdir = "buffer"
+-- BROKEN
+-- vim.opt.bsdir = "buffer"
 
 -- Indenting
 vim.o.expandtab = true
